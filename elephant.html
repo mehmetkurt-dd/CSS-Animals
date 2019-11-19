@@ -1,0 +1,293 @@
+<style>
+    * {
+      margin :0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background:rgb(214, 214, 87);
+       }
+    
+    .elephant {
+      
+      position: relative;
+      margin: auto;
+      display: block;
+      margin-top: 5%;
+      width: 500px;
+      height: 500px;
+      --border : 1px solid gray;
+    }
+
+    .elephant * {
+      position: absolute;
+    }
+    
+    .elephant-bottom {
+      top: 40%;
+      left: 23%;
+      background: rgb(199, 123, 199);
+      width: 55%;
+      height: 46%;
+      border-radius: 70% 70% 70% 70%;
+      z-index: -2;
+    }
+
+    .right-feet {
+      top: 60%;
+      left: 20%;
+      background: rgb(199, 123, 199);
+      width: 25%;
+      height: 50%;
+      border-radius: 6% 6% 6% 6%;
+      --transform: rotate(45deg);
+      z-index: -3;
+    }
+    
+    .left-feet {
+      top: 60%;
+      left: 55%;
+      background: rgb(199, 123, 199);
+      width: 25%;
+      height: 50%;
+      border-radius: 6% 6% 6% 6%;
+     --transform: rotate(-45deg);
+      z-index: -3;
+    }
+
+    .feet-inner1 {
+      bottom: 0;
+      left: 0;
+      background: lightgray;
+      width: 33.333%;
+      height: 10%;
+      border-radius: 120% 120% 0% 0%;
+    }
+    .feet-inner2 {
+      bottom: 0;
+      left: 33.333%;
+      background: lightgray;
+      width: 33.333%;
+      height: 12%;
+      border-radius: 120% 120% 0% 0%;
+    }
+    .feet-inner3 {
+      bottom: 0;
+      left: 66.666%;
+      background: lightgray;
+      width: 33.333%;
+      height: 10%;
+      border-radius: 120% 120% 0% 0%;
+    } 
+    
+
+    .elephant-top {
+      top: 15%;
+      left: 30%;
+      background:  rgb(199, 123, 199);
+      width: 40%;
+      height: 35%;
+      border:2px solid rgb(196, 115, 196);
+      border-radius: 60% 60% 65% 65%;
+    }
+
+    
+    .right-ear {
+      top: -20%;
+      left: -70%;
+      background: rgb(199, 123, 199);
+      width: 90%;
+      height: 150%;
+      border:2px solid rgb(196, 115, 196);
+      border-radius: 70% 60% 60% 60%;
+     --transform: rotate(45deg);
+      z-index: -1;
+    }
+
+    .right-ear-inner {
+      top: 5%;
+      left: 2%;
+      background: rgb(151, 93, 151);
+      width: 90%;
+      height: 90%;
+      border:2px solid rgb(196, 115, 196);
+      border-radius: 70% 60% 60% 60%;
+     --transform: rotate(45deg);
+      z-index: -1;
+    }
+
+    .left-ear {
+      top: -20%;
+      left: 80%;
+      background: rgb(199, 123, 199);
+      width: 90%;
+      height: 150%;
+      border:2px solid rgb(196, 115, 196);
+      border-radius: 60% 70% 60% 60%;
+     --transform: rotate(45deg);
+      z-index: -1;
+    }
+
+    .left-ear-inner {
+      top: 5%;
+      left: 2%;
+      background: rgb(151, 93, 151);
+      width: 90%;
+      height: 90%;
+      border:2px solid rgb(196, 115, 196);
+      border-radius: 60% 70% 60% 60%;
+     --transform: rotate(45deg);
+      z-index: -1;
+    }
+
+    .right-eye {
+      top: 37%;
+      left: 29%;
+      background: rgba(22, 22, 22, 0.767);
+      width: 11%;
+      height: 12%;
+      border-radius: 50%; 
+    }
+
+    .left-eye {
+      top: 37%;
+      right: 29%;
+      background: rgba(22, 22, 22, 0.767);
+      width:11%;
+      height: 12%;
+      border-radius: 50%; 
+    }
+
+    .sparkle {
+      top: 15%;
+      left: 55%;
+      background: white;
+      width: 20%;
+      height: 20%;
+      border-radius: 50%;  
+    }
+
+    .right-blush {
+      top: 65%;
+      left: 15%;
+      background: rgba(219, 25, 219, 0.541);
+      width: 10%;
+      height: 10%;
+      border-radius: 50%;  
+    }
+    
+    .left-blush {
+      top: 65%;
+      right: 15%;
+      background: rgba(219, 25, 219, 0.541);
+      width: 10%;
+      height: 10%;
+      border-radius: 50%;  
+    }
+
+    .trunk {
+      top: 41%;
+      left: 43.5%;
+      background: rgb(199, 123, 199);
+      width: 13%;
+      height: 27%;
+      border-left:3px solid rgba(172, 95, 172, 0.616);
+      border-right:3px solid rgba(172, 95, 172, 0.616);
+      border-radius: 5% 5% 35% 35%;
+    }
+
+    .right-nostril {
+      top: 67%;
+      left: 44%;
+      background: rgb(199, 123, 199);
+      width: 6%;
+      height: 4%;
+      border-left:3px solid rgba(172, 95, 172, 0.616);;
+      border-bottom:3px solid rgba(172, 95, 172, 0.616);;
+      border-radius: 45% 45% 45% 45%;
+    }
+
+    .left-nostril {
+      top: 67%;
+      left: 50%;
+      background: rgb(199, 123, 199);
+      width: 6%;
+      height: 4%;
+      border-right:3px solid rgba(172, 95, 172, 0.616);
+      border-bottom:3px solid rgba(172, 95, 172, 0.616);
+      border-radius: 45% 45% 45% 45%;
+    }
+
+    .trunk-lines {
+      top: 39%;
+      left: 45%;
+      background: rgb(199, 123, 199);
+      width: 10%;
+      height: 1.7%;
+      border-top:2px solid rgb(196, 115, 196);
+      border-bottom:2px solid rgb(196, 115, 196);
+      border-radius: 5% 5% 5% 5%;
+    }
+
+   .right-tusk {
+      top: 45%;
+      left: 41%;
+      background: lightgray;
+      width: 3.5%;
+      height: 8%;
+      border-radius: 50% 40% 40% 40%;
+      transform: rotate(5deg);
+   }
+
+   .left-tusk {
+      top: 45%;
+      right: 41%;
+      background: lightgray;
+      width: 3.5%;
+      height: 8%;
+      border-radius: 40% 50% 40% 40%;
+      transform: rotate(-5deg);
+   }
+    
+</style>
+
+<div class="elephant">
+
+    <div class="elephant-bottom">
+      <div class="right-feet">
+          <div class="feet-inner1"></div>
+          <div class="feet-inner2"></div>
+          <div class="feet-inner3"></div>
+      </div>
+      <div class="left-feet">
+          <div class="feet-inner1"></div>
+          <div class="feet-inner2"></div>
+          <div class="feet-inner3"></div>
+      </div>
+    </div>
+
+    <div class="elephant-top">
+      <div class="right-eye">
+        <div class="sparkle"></div>
+      </div>
+      <div class="left-eye">
+        <div class="sparkle"></div>
+      </div>
+      <div class="right-ear">
+        <div class="right-ear-inner"></div>
+      </div>
+      <div class="left-ear">
+        <div class="left-ear-inner"></div>
+      </div>
+      <div class="right-blush"></div>
+      <div class="left-blush"></div>
+    </div>
+
+    <div class="right-tusk"></div>
+    <div class="left-tusk"></div>
+    <div class="trunk-lines"></div>
+    <div class="trunk"></div>
+    <div class="right-nostril"></div>    
+    <div class="left-nostril"></div>
+  </div>
